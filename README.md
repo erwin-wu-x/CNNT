@@ -30,6 +30,23 @@ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy scipy sklearn
 pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple tqdm multiprocessing cv2 matplotlib
 ```
 
+# CNNT framework Example (Linux needed)
+
+First, exacting the images (opencv, matplotlib needed) or just download [figures]().
+
+```
+cd Dataset && mkdir raw
+cd raw # download raw mat files
+python3 extractor.py
+cd ../..
+```
+
+Now we have figs, then run Localization.m in MATLAB to get the locations.
+
+Then we can save tracks with Save Trajectories Example.
+
+Make sure all the trajectories are saved correctly, then run render.m in MATLAB to get the results.
+
 # Time counter Example
 
 (tqdm needed)
@@ -64,20 +81,3 @@ optional arguments:
   -D MAX_DISTANCE, --max_distance MAX_DISTANCE
   -S SAVE_TRACK, --save_track SAVE_TRACK
 ```
-
-# CNNT framework Example (Linux needed)
-
-First, exacting the images (opencv, matplotlib needed) or just download [figures]().
-
-```
-cd Dataset && mkdir raw
-cd raw # download raw mat files
-python3 extractor.py
-cd ../..
-```
-
-Now we have figs, then run Localization.m in MATLAB to get the locations.
-
-Then we can save tracks with Save Trajectories Example.
-
-Make sure all the trajectories are saved correctly, then run render.m in MATLAB to get the results.
